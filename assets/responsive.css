@@ -335,6 +335,11 @@
   /* line 478, responsive.scss */
   .divaloreHeader__logo {
     font-size: 35px; }
+    .content {
+      margin-top: 121px; 
+      padding: 0;
+      overflow: hidden;
+    }
     .dl-menu {
       display: block;
     }
@@ -379,12 +384,7 @@
     }
     .header-wrapper.collapsed .dl-menuwrapper {
       top: 0;
-    }
-  /* line 482, responsive.scss */
-  .content {
-    margin-top: 70px;
-    padding: 0;
-    overflow: hidden; }
+    } 
 
   /* line 488, responsive.scss */
   .divaloreHeader__icon {
@@ -788,10 +788,7 @@
   
   .eliteHeader {
     padding: 0 20px;
-  }
-  .content {
-    margin-top: 0;
-  }
+  } 
   .banners2-section_grid > div {
     left: auto;
     max-height: none;
