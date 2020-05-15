@@ -96,6 +96,10 @@ a:not(.no-transparent):hover {
     height: auto;
     color: white;
     background: url("index-hero.jpg") no-repeat center -3px / cover transparent;
+    
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
 } 
 .video-help__wrap > .row {
     align-items: flex-start;
@@ -173,37 +177,102 @@ a:not(.no-transparent):hover {
     left: 0px;
     top: -3px;
     display: none;
-} 
-
-.main-wrapper { 
-}
+}  
 
 .header-wrapper {
     background-color: white;
     transform: translate3d(0, 0, 0);
-    position: relative;
+    position: absolute;
+    margin-top: 0;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     padding: 0px; 
-    width: 100%;
-    -webkit-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
+    width: 100%; 
+    -webkit-transition: all 0ms;
+    -o-transition: all 0ms;
+    transition: all 0ms;
 }
+.header-wrapper.scrolled {
+    margin-top: -233px;
+    position: fixed; 
+}  
 
+.header-wrapper.scrolled:not(.collapsed) .burger-icon { 
+    background: url("burger-black.svg") no-repeat center center / 100% transparent;
+}
+.mainnav_links__wrap { 
+    display: none;
+    position: relative;
+    top: -51px;
+    opacity: 0;
+    height: 51px;
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+}
+.header-wrapper.scrolled:not(.collapsed) .mainnav_links__wrap { 
+    opacity: 1;
+    display: flex;
+}
+.header-wrapper.scrolled  .phones-inline {
+    top: -50px;
+    position: relative;
+    opacity: 1;
+}
+.header-wrapper.scrolled .eliteHeader__mainnav {
+    height: 51px;
+}
+.header-wrapper.scrolled .dl-trigger {
+    background: white;
+    color: black;
+    border-bottom: 2px solid white; 
+}
+.header-wrapper.collapsed .eliteHeader { 
+    margin-top: -50px;
+}
+.header-wrapper.collapsed .eliteHeader__mainnav {
+    height: 51px;
+}
+.header-wrapper.collapsed .dl-menuwrapper {
+    top: 0;
+}
+.header-wrapper.collapsed .dl-trigger {
+    background: transparent;
+    color: white;
+    border: 0px solid;
+}
+.header-wrapper.collapsed .dl-trigger.dl-active {
+    background: white;
+    color: black;
+}
+.header-wrapper.collapsed .mainnav__subcatalog {
+    top: 50px
+}
+.header-wrapper.collapsed .phones-inline {
+    opacity: 1;
+    top: 0;
+}
+.phones-inline .link-tel {
+    color: white;
+    padding: 0 15px;
+}
+.phones-inline .link-tel__wrap i {
+    top: 0px;
+    right: 14px;
+    line-height: 19px;
+    color: white;
+}
 .header-wrapper .eliteHeader__logo { 
     display: flex;
     justify-content: center;
     align-items: stretch;
     padding-bottom: 51px;
+} 
+.content {
+    margin-top: 281px;
 }
-
-.header-wrapper.scrolled { 
-    padding-bottom: 0px;
-}
-
 
 .eliteHeader__icons {
     justify-content: flex-end;
@@ -505,10 +574,11 @@ header .search_widget-submit {
     font-size: 14px;
     font-weight: 400;
     border-top: 2px solid #fff;
+     
 }
  
-.eliteHeader__mainnav>.container>ul {
-    display: flex;
+.mainnav_links__wrap {
+    display: none;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
@@ -527,7 +597,15 @@ header .search_widget-submit {
 .eliteHeader__mainnav a:first-child {
     margin-left: 0;
 }
-
+.phones-inline {
+    opacity: 0;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+}
 /* Prospero */
 .menu__link {      
     font-family: Gilroy;
@@ -579,10 +657,13 @@ header .search_widget-submit {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     color: black;
     display: none;
+    -webkit-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
 }
 .mainnav__subcatalog.opened-catalog {
     display: block; 
@@ -630,18 +711,25 @@ header .search_widget-submit {
 .dl-menuwrapper {
     top: -50px;
     position: relative;
+    -webkit-transition: top 300ms;
+    -o-transition: top 300ms;
+    transition: top 300ms;
 }
 .dl-menuwrapper .dl-trigger { 
     border: 2px solid #fff;
     border-bottom: 0px solid;
     border-radius: 3px 3px 0 0;
     background-image: linear-gradient(to bottom, #e5120a 0%, #b10a06 100%);
+    transition: color 300ms;
 }
 .dl-menuwrapper:hover button  {
     background-color: #b42923;
 }
 .eliteHeader__mainnav {
     position: relative;
+}
+.eliteHeader__mainnav .mainnav_collapsedline {
+    flex-wrap: nowrap;
 }
 .eliteHeader__mainnav .menu__item span {
     padding: 0 15px 0;
@@ -860,7 +948,7 @@ box-shadow: inset 0px -7px 55px 25px rgba(0,0,0,0.25);
 
 .promo-slider-elite .swiper-slide img { 
     max-height: none;
-    max-width: none;
+    max-width: 100%;
     min-width: 100%;
     min-height: 445px;
     object-fit: cover;
@@ -1130,7 +1218,7 @@ box-shadow: inset 0px -7px 55px 25px rgba(0,0,0,0.25);
     overflow: visible;
     left: -33px;
 }
-.banners2-section_grid > div:nth-child(1)  .img__relative {
+.statick-block  .img__relative {
     padding-bottom: 56%; 
 }
 .banners2-section_grid > div:nth-child(2) .img__relative {
@@ -1212,14 +1300,14 @@ box-shadow: inset 0px -7px 55px 25px rgba(0,0,0,0.25);
     width: 205px;
     text-transform: none;
 } 
-.banners2-section_grid > div:nth-child(1) .banners2-section__info { 
+.statick-block .banners2-section__info { 
     color: #070000;
     text-transform: inherit;
     text-align: center;
     font-size: 17px; 
     padding: 25px 100px;
 }
-.banners2-section_grid > div:nth-child(1) .banners2-section__link {
+.statick-block .banners2-section__link {
     flex-direction: column-reverse;
     width: 100%;
     text-transform: uppercase;
@@ -1232,6 +1320,9 @@ box-shadow: inset 0px -7px 55px 25px rgba(0,0,0,0.25);
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 90px;
+    -webkit-box-shadow: 300px 0px 0px 0px #d22819;
+    -moz-box-shadow: 300px 0px 0px 0px #d22819;
+    box-shadow: 300px 0px 0px 0px #d22819;
 }
 .banners2-section_grid > div:nth-child(2) .banners2-section__link:nth-child(2) {
     font-size: 67px;
@@ -1347,10 +1438,6 @@ box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
 .portfolio__wrap .swiper-button-next { 
     right: -75px;
 }
-.portfolio__slider {
-    overflow: visible;
-    margin-top: 20px;
-} 
 
 .portfolio__slider .img__relative { 
     padding: 0 0 100% 0;
@@ -1528,7 +1615,9 @@ h5.all-brands {
 .portfolio__wrap {
     position: relative;
 }
-.portfolio__slider {
+
+.portfolio__slider { 
+    margin-top: 20px; 
     overflow: hidden;
 }
  .portfolio__slider .swiper-slide{
@@ -1664,12 +1753,9 @@ h5.all-brands {
 }
 .eliteFooter__links .centered-info {
     padding: 0 75px;
-}
-.logo-text-only {
-    max-height: 100px;
 } 
 .logo-text-only img {
-    max-height: 300px;
+    max-width: 190px;
 }
 .eliteFooter__links {
     text-align: left;
@@ -1953,7 +2039,9 @@ h5.all-brands {
     margin-bottom: 50px;
     text-transform: uppercase;
 }
-
+.eliteHeader .logo-text-only {
+    height: 70px;
+}
 .product__related_wrap {
     display: flex;
     flex-wrap: wrap;
@@ -2404,8 +2492,8 @@ h5.all-brands {
 
 .burger-mobile {
     width: 70px;
-    height: 50px;
-    background: url("5-burger.svg") no-repeat center left / 23px transparent;
+    height: 70px;
+    background: url("burger-white.svg") no-repeat center left / 23px transparent;
 }
 
 .topline {
@@ -4450,13 +4538,16 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .header_side__block span {
     line-height: 35px;
 }
+.header_line_link,
 .header_side_link {
     flex: 1 1 33%;
     text-align: center;
+    height: 100%;
 }
 .header_side_link:not(:last-child) {
     border-right: 1px solid white;
 }
+.header_line_link a,
 .header_side_link a {
     display: block;
     width: 100%;
@@ -4469,6 +4560,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 .header_side_link a:hover { 
     background-color: #E4180F;
+}
+.header_line_link a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock-info__wrap {

@@ -33,20 +33,34 @@ document.querySelector('a[href="#menu"]')
 
 //	шапка
 
-function scrolled() {
-  if ($(this).scrollTop() > 130) {
-    $(".header-wrapper").addClass("scrolled")
-  } else {
-    $(".header-wrapper").removeClass("scrolled")
+ 
+$(window).load(function () { 
+  let headerGap = 230;
+  console.log(headerGap);
+  const FollowScrollMenu = menuContainer => {
+    let lastScrollPosition = window.pageYOffset;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollPosition = window.pageYOffset;
+      const direction = Math.sign(currentScrollPosition - lastScrollPosition);
+      lastScrollPosition = currentScrollPosition;
+      const shouldBeCollapsed = direction > 0 && currentScrollPosition > headerGap;
+      const shouldBeHidden = currentScrollPosition > headerGap;
+      menuContainer.classList.toggle('collapsed', shouldBeCollapsed);
+      menuContainer.classList.toggle('scrolled', shouldBeHidden);
+    })
   }
-}
+  FollowScrollMenu(document.querySelector('header'));
+});  
 
-document.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("load", scrolled);
-  window.addEventListener("scroll", scrolled);
-});
+//	меняем тип открывающегося меню в зависимости от ширины экрана
 
-".teplonetHeader__mainnav"
+if( window.innerWidth >= 768 ){
+  $(".teplonetHeader__mainnav").addClass("no-mobile")
+} else {
+  $(".teplonetHeader__mainnav").removeClass("no-mobile")
+} 
+
 //	кастомные селект оптионс
 
 $('select[costum-select-options="true"]').each(function () {
@@ -125,18 +139,16 @@ $(".search_widget .close").click(function () {
  
 
 var sliderPortfolio = new Swiper('.portfolio__slider', {
-  slidesPerView: 6,
-  spaceBetween: 50,
+  slidesPerView: 6, 
   loop: true,   
-  loopAdditionalSlides: 4,
-  lazy: true,
+  spaceBetween: 50, 
   autoplay: {
     delay: 5000,
   },
   navigation: {
     nextEl: '.portfolio__wrap .swiper-button-next',
     prevEl: '.portfolio__wrap .swiper-button-prev',
-  },
+  },  
   breakpoints: {
       0: {
           slidesPerView: 1, 
@@ -154,7 +166,7 @@ var sliderPortfolio = new Swiper('.portfolio__slider', {
           loop: true,   
           lazy: true,
       },
-      1024: {
+      1200: {
           slidesPerView: 5, 
           loop: true,  
           loopAdditionalSlides: 3,
