@@ -755,6 +755,13 @@
   .banners2-section_grid > div:nth-child(1) .img__relative {
     padding-bottom: 115%;
   }
+  .banners2-section_grid .shift-block .banners2-section__info {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .banners2-section__pdf {
+    margin: 50% 0 0;
+  }
   .eliteFooter__links {
     padding: 15px 35px 50px;
   }
