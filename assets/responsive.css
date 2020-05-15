@@ -230,7 +230,7 @@
       overflow: auto; }
       .eliteFooter .last-cell::before {
         height: 1px;
-        width: 103%;    
+        width: 100%;    
       }
   /* line 345, responsive.scss */
   .eliteFooter_container > .row > div {
@@ -778,6 +778,9 @@
   .advantage__block:last-child {    
     padding-bottom: 100px;
     margin-bottom: 50px;
+  }
+  .eliteFooter__links .centered-info {
+    text-align: center;
   }
 }
 @media screen and (max-width: 640px) {

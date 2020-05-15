@@ -195,8 +195,7 @@ body.mm-ocd-opened {
     content: '';
     display: block;
     position: absolute;
-    top: 25px;
-    top: calc(var(--mm-spn-item-height)/ 2);
+    top: 23px; 
     right: 25px;
     right: calc(var(--mm-spn-item-height)/ 2);
     z-index: 0;

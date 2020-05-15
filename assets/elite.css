@@ -4240,6 +4240,9 @@ input#client_consent_to_personal_data {
 #menu .mobile_navline .search_top_close {
     padding: 15px 30px;
 }
+#menu .additional .address {
+    flex-wrap: wrap;
+}
 .search_top_close {
     cursor: pointer;
     background: url("close.svg") no-repeat center center/11px transparent;
