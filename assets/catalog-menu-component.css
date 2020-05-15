@@ -116,7 +116,7 @@
 	background-color: rgb(47, 60, 70);
 	margin: 0;
 	position: absolute;
-	width: calc(100% - 20px);
+	width: 100%;
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transform: translateY(10px);
@@ -167,7 +167,7 @@ All this is done for any sub-level being entered.
 .dl-menuwrapper > .dl-submenu {
 	position: absolute;
 	background-color: rgb(47, 60, 70);
-	width: calc(100% - 20px);
+	width: 100%;
 	top: 50px;
 	left: 10px;
 	margin: 0;

@@ -35,7 +35,7 @@ document.querySelector('a[href="#menu"]')
 
  
 $(window).load(function () { 
-  let headerGap = 230;
+  const headerGap = document.querySelector(".eliteHeader").offsetHeight - 51; 
   console.log(headerGap);
   const FollowScrollMenu = menuContainer => {
     let lastScrollPosition = window.pageYOffset;
@@ -56,9 +56,9 @@ $(window).load(function () {
 //	меняем тип открывающегося меню в зависимости от ширины экрана
 
 if( window.innerWidth >= 768 ){
-  $(".teplonetHeader__mainnav").addClass("no-mobile")
+  $(".eliteHeader__mainnav").addClass("no-mobile")
 } else {
-  $(".teplonetHeader__mainnav").removeClass("no-mobile")
+  $(".eliteHeader__mainnav").removeClass("no-mobile")
 } 
 
 //	кастомные селект оптионс
@@ -135,7 +135,7 @@ $(".teplonetHeader__icon.search").click(function () {
 });
 $(".search_widget .close").click(function () {
   $(".search_widget").removeClass("search_opened");
-});
+}); 
  
 
 var sliderPortfolio = new Swiper('.portfolio__slider', {

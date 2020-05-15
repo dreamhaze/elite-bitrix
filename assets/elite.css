@@ -221,6 +221,7 @@ a:not(.no-transparent):hover {
     position: relative;
     opacity: 1;
 }
+.header-wrapper.collapsed .eliteHeader__mainnav,
 .header-wrapper.scrolled .eliteHeader__mainnav {
     height: 51px;
 }
@@ -231,10 +232,7 @@ a:not(.no-transparent):hover {
 }
 .header-wrapper.collapsed .eliteHeader { 
     margin-top: -50px;
-}
-.header-wrapper.collapsed .eliteHeader__mainnav {
-    height: 51px;
-}
+} 
 .header-wrapper.collapsed .dl-menuwrapper {
     top: 0;
 }
@@ -273,7 +271,14 @@ a:not(.no-transparent):hover {
 .content {
     margin-top: 281px;
 }
-
+.logotype.in-mobile {
+    width: 100% !important;
+    text-align: center;
+    height: auto;
+}
+.logotype.in-mobile img {
+    height: 70px;
+}
 .eliteHeader__icons {
     justify-content: flex-end;
     align-items: center;
