@@ -367,8 +367,11 @@
     .header-wrapper.collapsed .eliteHeader {
       margin-top: 0;
     }
+    .dl-trigger .burger-icon {
+      background: url("icon-brands.svg") no-repeat center center / 100% transparent;
+    }
     .header-wrapper.scrolled:not(.collapsed) .burger-icon {
-      background: url("burger-white.svg") no-repeat center center / 100% transparent;
+      background: url("icon-brands.svg") no-repeat center center / 100% transparent;
     }
     .eliteHeader__mainnav {
       height: 0px;
