@@ -143,7 +143,7 @@ var sliderPortfolio = new Swiper('.portfolio__slider', {
   loop: true,   
   spaceBetween: 50, 
   autoplay: {
-    delay: 5000,
+    delay: 3500,
   },
   navigation: {
     nextEl: '.portfolio__wrap .swiper-button-next',
