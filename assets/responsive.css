@@ -35,7 +35,7 @@
     margin: 0px; } }
 @media screen and (max-width: 1200px) {
   /* line 50, responsive.scss */
-  .template-is-index .main-wrapper {
+  .template-is-index .content {
     overflow: hidden; } 
 
   /* line 59, responsive.scss */
@@ -139,8 +139,8 @@
     
 @media screen and (max-width: 1024px) {
   /* line 236, responsive.scss */
-  .main-wrapper {
-    margin-top: 175px; }
+  .content {
+    margin-top: 281px; }
 
   /* line 240, responsive.scss */
   .main-slider .swiper-slide {
@@ -337,8 +337,8 @@
     font-size: 35px; }
 
   /* line 482, responsive.scss */
-  .main-wrapper {
-    margin-top: 100px;
+  .content {
+    margin-top: 70px;
     padding: 0;
     overflow: hidden; }
 
