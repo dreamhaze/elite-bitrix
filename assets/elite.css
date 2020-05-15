@@ -1209,9 +1209,7 @@ box-shadow: inset 0px -7px 55px 25px rgba(0,0,0,0.25);
     line-height: 115px;
     font-size: 29px;
     font-weight: 700;
-}
-.black-row .text-center {
-}
+} 
 .banners2-section_grid {
     color: white;
     margin-bottom: 20px;
@@ -2512,9 +2510,7 @@ h5.all-brands {
     display: flex;
     flex-wrap: nowrap;
 }
-
-.breadcrubms__list { 
-}
+ 
 
 .breadcrubms {
     justify-content: space-between;
