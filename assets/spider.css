@@ -24,7 +24,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
   
-  color: #42474c;
+  color: black;
   font-family: Gilroy;
 }
 
@@ -161,7 +161,7 @@ abbr[title] {
 
 b, strong {
   font-weight: inherit;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 /**

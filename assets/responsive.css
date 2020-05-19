@@ -135,7 +135,16 @@
   .collection-filter-and-sort {
     flex-wrap: wrap;
     justify-content: flex-end;
-    padding-bottom: 15px; } } 
+    padding-bottom: 15px; } 
+  
+    .mainnav_collapsedline span {
+      flex: 1 1 50%;
+      text-align: right;
+    } 
+    .phones-inline {
+      padding: 0;
+    }
+  } 
     
 @media screen and (max-width: 1024px) {
   /* line 236, responsive.scss */
@@ -146,13 +155,6 @@
   .main-slider .swiper-slide {
     font-size: 19px; }
 
-  .phones-inline {
-    padding: 0;
-  }
-  .mainnav_collapsedline span {
-    flex: 1 1 50%;
-    text-align: right;
-  }
   .mainnav_collapsedline .link-tel__wrap i { 
     font-size: 11px;
   }

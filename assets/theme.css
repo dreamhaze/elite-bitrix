@@ -404,14 +404,7 @@ button.option-value[selected] {
 .pallette_2.gallery-wrapper svg use {
   stroke: #333333;
 }
-
-/* line 341, variables.scss.liquid */
-
-.pallette_2 .gallery-thumbs-wrap .swiper-button-prev, .pallette_2 .gallery-thumbs-wrap .swiper-button-next {
-  background-color: transparent;
-  border-color: #33333350;
-}
-
+ 
 /* line 346, variables.scss.liquid */
 
 .pallette_2 option {
@@ -7559,12 +7552,10 @@ li.filter-item {
 
 .gallery-thumbs-wrap .swiper-button-prev, .gallery-thumbs-wrap .swiper-button-next {
   width: 40px;
-  height: 40px;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border: 1px solid #d5d5d5;
+  height: 70px;
+  margin-top: -35px;
+  text-align: center; 
+  overflow: visible;
 }
 
 /* line 837, main.scss */
@@ -7605,7 +7596,7 @@ li.filter-item {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 100%;
+  padding-top: 10px;
 }
 
 /* ================================ */
@@ -9610,8 +9601,7 @@ input[type="checkbox"]:checked + .filter-color[title="белый"] {
   box-sizing: border-box;
   text-align: center;
   border: 1px solid transparent;
-  overflow: hidden;
-  padding-bottom: calc(100% - 2px);
+  overflow: hidden; 
 }
 
 .image-container.is-cover.gallery-thumb > img {
@@ -9619,6 +9609,10 @@ input[type="checkbox"]:checked + .filter-color[title="белый"] {
   object-fit: contain;
   -o-object-position: 50%;
   object-position: 50%;
+  min-width: 110px;
+  min-height: 110px;
+  transform: translate(-50%, -50%);
+  margin-left: 50%;
 }
  
 .gallery-wrapper .swiper-button-prev,
@@ -9631,8 +9625,7 @@ input[type="checkbox"]:checked + .filter-color[title="белый"] {
   right: -44px;
 }
 
-.gallery-thumbs-wrap {
-  width: calc(100% - 88px);
+.gallery-thumbs-wrap { 
   position: relative;
   margin: auto;
 }
