@@ -184,7 +184,7 @@ a:not(.no-transparent):hover {
     transform: translate3d(0, 0, 0);
     position: absolute;
     margin-top: 0;
-    top: 0;
+    top: 50px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -263,9 +263,10 @@ a:not(.no-transparent):hover {
     justify-content: center;
     align-items: stretch;
     padding-bottom: 51px;
+    text-transform: capitalize;
 } 
 .content {
-    margin-top: 281px;
+    margin-top: 265px;
     padding-top: 35px;
 }
 .template-is-about .header-wrapper.scrolled ~ .content { 
