@@ -1003,6 +1003,9 @@
     }
     .about + .advantages {
       margin-top: 39px;
+    } 
+    .about__with-red-border { 
+      background: url("about-cobra.jpg") no-repeat calc(100% + 150px) center / 300px transparent; 
     }
   }
 @media screen and (max-width: 480px) {

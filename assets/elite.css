@@ -1221,6 +1221,7 @@ box-shadow: inset 0px -7px 55px 25px rgba(0,0,0,0.25);
 .about + .advantages {    
     margin-top: -37px;
     background: white;
+    z-index: 97;
 }
 .banners2-section .black-row {
     height: 115px;
@@ -1447,6 +1448,15 @@ box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.75);
     position: relative;
 }
 
+.portfolio { 
+    background: url("section-advantages-bg-black.svg") repeat-x center -378px / 1370px transparent;
+    position: relative;
+    top: -100px;
+    min-height: 285px;
+    color: white; 
+    padding: 70px 0 15px;
+    z-index: 100;
+}
 
 .portfolio__wrap .swiper-button-prev, 
 .portfolio__wrap .swiper-button-next {
@@ -1626,14 +1636,6 @@ h5.all-brands {
     margin: 0 auto;
     font-weight: 700;
     padding-left: 45px;
-}
-.portfolio { 
-    background: url("section-advantages-bg-black.svg") repeat-x center -378px / 1370px transparent;
-    position: relative;
-    top: -100px;
-    min-height: 285px;
-    color: white; 
-    padding: 70px 0 15px;
 }
 .portfolio__wrap {
     position: relative;
@@ -4863,7 +4865,7 @@ i.icon-cart {
 .about {
     padding-top: 75px; 
     background: url("section-about-bg1.svg") repeat-x center -378px / 1370px transparent;
-}
+} 
 .about h1,
 .advantages h3 {
     font-size: 27px;
@@ -4913,15 +4915,28 @@ i.icon-cart {
 .about__secondrow {
     margin-top: 57px;
     background-color: white;
+    position: relative;
+    z-index: 9;
 }
 .about__with-red-border {
     border-left: 5px solid #bd0b12;
     padding: 90px; 
-    background: url("about-cobra.jpg") no-repeat calc(100% + 150px) center / 300px transparent; 
+    background: none;
+    max-height: 930px;
 }
 .about__with-red-border-bottom .img_wrapper {
     border-bottom: 5px solid #bd0b12; 
     position: relative;
+}
+.about__secondrow:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -150px;
+    width: 100%;
+    height: 100%; 
+    background: url("about-cobra.jpg") no-repeat right center / 300px white;  
+    z-index: -1;    
 }
 
 .about__with-red-border-bottom .img_wrapper:after {
