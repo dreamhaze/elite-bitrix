@@ -184,7 +184,7 @@ a:not(.no-transparent):hover {
     transform: translate3d(0, 0, 0);
     position: absolute;
     margin-top: 0;
-    top: 50px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -195,7 +195,7 @@ a:not(.no-transparent):hover {
     transition: all 0ms;
 }
 .header-wrapper.scrolled {
-    margin-top: -233px;
+    margin-top: -274px;
     position: fixed; 
 }  
 /* 
@@ -226,8 +226,15 @@ a:not(.no-transparent):hover {
 .header-wrapper.scrolled .eliteHeader__mainnav {
     height: 51px;
 } 
+.logo-icon-only { 
+    bottom: 0;
+    left: 0;
+    height: 45px; 
+    background: url("logo-icon-only.svg") no-repeat center center / 45px transparent;
+    z-index: 50;
+}
 .header-wrapper.collapsed .eliteHeader { 
-    margin-top: -50px;
+     
 } 
 .header-wrapper.collapsed .dl-menuwrapper {
     top: 0;
@@ -339,6 +346,7 @@ a:not(.no-transparent):hover {
     height: 45px;
     background: rgba(255, 255, 255, 0.05);
     position: relative;
+    padding: 0 10px;
     top: -50px;
 }
 .inpt-group .styledSelect { 
