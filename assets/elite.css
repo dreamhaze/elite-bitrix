@@ -1755,10 +1755,9 @@ h5.all-brands {
     position: relative;
 }
 
-.eliteFooter_container 
-.clock-info__wrap,
+.eliteFooter_container .clock-info__wrap,
 .eliteFooter_container .link-tel__wrap {
-    width: 120px;
+    width: 190px;
 }
 .eliteFooter_container .link-tel__wrap {
     width: 150px;
