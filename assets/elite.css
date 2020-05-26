@@ -1758,10 +1758,7 @@ h5.all-brands {
 .eliteFooter_container .clock-info__wrap,
 .eliteFooter_container .link-tel__wrap {
     width: 190px;
-}
-.eliteFooter_container .link-tel__wrap {
-    width: 150px;
-}
+} 
 .eliteFooter_container 
 .clock-info__wrap {
     padding-bottom: 25px;
