@@ -138,6 +138,9 @@ a:not(.no-transparent):hover {
     color: #E4180F;
     font-size: 15px;
 } 
+.link-tel__wrap i { 
+    top: 2px;
+}
 .link-tel:hover {
     text-decoration: underline;   
 }
@@ -266,12 +269,12 @@ a:not(.no-transparent):hover {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding-bottom: 51px;
-    padding-top: 25px;
+    padding-bottom: 35px;
+    padding-top: 15px;
     text-transform: capitalize;
 } 
 .content {
-    margin-top: 395px;
+    margin-top: 370px;
     padding-top: 35px;
 }
 .template-is-about .header-wrapper.scrolled ~ .content { 
@@ -1229,7 +1232,7 @@ box-shadow: inset 0px -7px 55px 25px rgba(0,0,0,0.25);
 .carousel + .advantages {
     margin-top: 30px; 
 }
-.about + .advantages {    
+.about2 + .advantages {    
     margin-top: -37px;
     background: white;
     z-index: 97;
@@ -1755,10 +1758,12 @@ h5.all-brands {
     position: relative;
 }
 
-.eliteFooter_container .clock-info__wrap,
-.eliteFooter_container .link-tel__wrap {
+.eliteFooter_container .clock-info__wrap  {
     width: 190px;
 } 
+.eliteFooter_container .link-tel__wrap {
+    width: auto;
+}
 .eliteFooter_container 
 .clock-info__wrap {
     padding-bottom: 25px;
@@ -4897,47 +4902,42 @@ i.icon-cart {
 }
 .about__image-block {
     position: relative;
+    height: 330px;
 }
 .about__image-block .sub-text-1 {
     position: absolute;
-    top: 79px;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%; 
     background-image: 
         linear-gradient(
             to top, 
-            #CF261D 0%, 
+            #bd0b12 0%, 
             rgba(194, 48, 40, 0.767) 32%,  
-            rgba(178, 60, 54, 0.308) 72%, 
-            rgba(178, 60, 54, 0) 100%);
+            rgba(178, 60, 54, .1) 71%, 
+            rgba(178, 60, 54, 0) 75%);
             display: flex;
     flex-direction: column-reverse;
     color: white;
     font-size: 22px;
     padding-left: 80px;
     padding-right: 162px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .about__firstrow {
-    height: 267px;
+    height: auto;
 }
-.about__secondrow {
-    margin-top: 57px;
+.about__secondrow { 
     background-color: white;
     position: relative;
     z-index: 9;
 }
-.about__with-red-border {
-    border-left: 5px solid #bd0b12;
+.about__with-red-border { 
     padding: 90px; 
     background: none;
     max-height: 930px;
-}
-.about__with-red-border-bottom .img_wrapper {
-    border-bottom: 5px solid #bd0b12; 
-    position: relative;
-}
+} 
 .about__secondrow:after {
     position: absolute;
     content: "";
@@ -4947,21 +4947,17 @@ i.icon-cart {
     height: 100%; 
     background: url("about-cobra.jpg") no-repeat right center / 300px white;  
     z-index: -1;    
-}
-
-.about__with-red-border-bottom .img_wrapper:after {
-    position: absolute;
-    content: ""; 
-    bottom: -32px;
-    right: -8px;
-    height: 100px;
-    width: 175px;
-    background: url("img-angle.svg") no-repeat bottom right / 100% transparent;
-    z-index: 10;
-    transform: rotate(-3deg);
+} 
+.about__with-red-border-bottom .img_wrapper {
+    display: block;
+    width: calc(100% + 5px);
 }
 .about__with-red-border-bottom img {
     display: block;
+    clip-path: polygon(100% 0, 100% calc(100% - 77px), calc(100% - 120px) 100%, 0 100%, 0 0);
+    border: 5px solid #bd0b12; 
+    border-top: 0px solid;
+    border-left: 0px solid;
 }
 .about__with-red-border h2 {
     font-size: 26px;
